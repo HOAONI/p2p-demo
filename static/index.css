@@ -1,0 +1,311 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9fafb;
+    display: flex;
+    height: 100vh;
+}
+
+/* 左侧导航栏样式 */
+.sidebar {
+    width: 220px;
+    background-color: #2c3e50;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+
+.sidebar button {
+    background-color: #34495e;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.sidebar button:hover {
+    background-color: #1abc9c;
+}
+
+/* 主内容区域样式 */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ecf0f1;
+    overflow-y: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+/* 通用模块样式 */
+.module {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.module h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #34495e;
+    text-align: center;
+}
+
+/* 表单样式 */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.form-group .node-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+    box-sizing: border-box;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* 节点列表样式 */
+.node-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.node-list li {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #dcdde1;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.response.success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.response.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.warn.success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.warn.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+#real-time-chat .node-id {
+    width: 500px;
+    height: 30px;
+    margin-left: 10px;
+    margin-bottom: 25px;
+}
+
+#real-time-chat .node-connect {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+#chat-input {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#read-text {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    border-color: #3498db;
+}
+
+#my-nodes {
+    width: 508px;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-left: 47px;
+}
+
+.refresh .refresh-btn {
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    background-color: darkseagreen;
+    /*border-color: darkseagreen;*/
+    border: 1px solid darkseagreen;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.nodes-search-btn {
+    width: 80px;
+    height: 38px;
+    border: 1px solid deepskyblue;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+
+#file-management::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.file-download-div {
+    /*width: 300px;*/
+    height: 500px;
+    float: right;
+    margin-right: 100px;
+}
+
+.file-upload-div {
+    height: 500px;
+    float: left;
+    margin-left: 100px;
+}
+
+
+/* 隐藏默认的文件选择按钮 */
+#file-input {
+    display: none;
+}
+
+/* 自定义文件选择按钮 */
+.custom-file-label {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #3498db;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.custom-file-label:hover {
+    background-color: #2980b9;
+}
+
+/* 文件上传容器样式 */
+.file-upload-form {
+    display: flex; /* 使用 flex 排版 */
+    align-items: center; /* 垂直居中 */
+    gap: 15px; /* 按钮间距 */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 自定义文件选择按钮 */
+.custom-file-label {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #3498db;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.2s;
+    border: none;
+    text-align: center;
+}
+
+.custom-file-label:hover {
+    background-color: #2980b9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* 上传按钮样式 */
+.upload-btn, .download-btn, .refresh-file-list-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #2ecc71;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.2s;
+    border: none;
+    text-align: center;
+}
+
+.upload-btn:hover {
+    background-color: #27ae60;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+#my-nodes-fileManage {
+    width: 300px;
+    height: 30px;
+    margin-top: 9px;
+}
+
+#my-nodes-fileManage-download {
+    width: 300px;
+    height: 30px;
+    margin-right: 15px;
+}
